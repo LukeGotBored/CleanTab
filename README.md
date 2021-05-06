@@ -1,2 +1,5 @@
 # CleanTab
-a simple, clean and useful New Tab for Chromium based browsers
+make your tabs clean and simple
+
+
+**CURRENTLY IN DEVELOPMENT**
