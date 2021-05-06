@@ -1,0 +1,10 @@
+{
+    "name": "CleanTab",
+    "description": "a clean \"New Tab\" with many simple to use features!",
+    "version": "0.01",
+    "permissions" : ["management", "tabs", "https://*/*", "http://*/*"],
+    "chrome_url_overrides" : {
+        "newtab": "newtab.html"
+    },
+    "manifest_version": 3
+}
