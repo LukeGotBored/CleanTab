@@ -1,10 +1,6 @@
+// this thing opens a new tab when installed
 chrome.runtime.onInstalled.addListener(function() {
-    // open a new tab after installing :)
-    chrome.tabs.create({
-        active: true
-    })
-})
-
+    chrome.tabs.create({active: true})})
 
 function getOrdinalNum(n) {
     return n + (n > 0 ? ['th', 'st', 'nd', 'rd'][(n > 3 && n < 21) || n % 10 > 3 ? 0 : n % 10] : '');
@@ -50,7 +46,7 @@ document.onkeypress = function (e) {
 };
 
 
-// it doesn't work, nice
+// this way the images don't get mixed up, weeeee
 $(function(){
     var bgimage = new Image();      
     bgimage.src="https://source.unsplash.com/1920x1080/?landscape";       
