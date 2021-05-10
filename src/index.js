@@ -1,7 +1,3 @@
-// this thing opens a new tab when installed
-chrome.runtime.onInstalled.addListener(function() {
-    chrome.tabs.create({active: true})})
-
 function getOrdinalNum(n) {
     return n + (n > 0 ? ['th', 'st', 'nd', 'rd'][(n > 3 && n < 21) || n % 10 > 3 ? 0 : n % 10] : '');
 }
@@ -11,7 +7,6 @@ function tabNameTime() {
     var Symbol;
     var today = new Date();
     var time = today.getHours() + ":" + String(today.getMinutes()).padStart(2, "0");
-    console.log(time)
 
     // Month - Day - Year
     const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
@@ -23,9 +18,7 @@ function tabNameTime() {
     
     setTimeout(tabNameTime, 1000);
 }
-
 tabNameTime()
-
 
 // there must be a better way of doing this, will check later...
 $('input[type="text"]').on('focus', function() {
@@ -39,12 +32,9 @@ $('input[type="text"]').on('focusout', function() {
 // Focus on search bar whenever a key gets pressed
 document.onkeypress = function (e) {
     document.getElementById("search").focus();
-    if (e.key == "Escape") {
-        console.log("hi")
-        document.getElementById("Search").blur();
-    }
-};
-
+    console.log(document.getElementById("search").value.replace(/\s+/g,"").length)
+   
+}
 
 // this way the images don't get mixed up, weeeee
 $(function(){
@@ -56,3 +46,14 @@ $(function(){
         $(".background").css("background-image","url("+$(this).attr("src")+")").show()                  
     });
 });
+
+function validateForm(){
+    if(document.getElementById("search").value.replace(/\s+/g,"").length == 0)
+    { 
+      alert("validation failed false");
+      return false;
+    }
+  
+    alert("validations passed");
+    return true;
+  }
