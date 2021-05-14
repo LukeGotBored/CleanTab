@@ -1,5 +1,4 @@
 # CleanTab
 make your tabs clean and simple
 
-
-**CURRENTLY IN DEVELOPMENT**
+# MOVED TO https://github.com/LukeGotBored/Focus
